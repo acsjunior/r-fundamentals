@@ -1,0 +1,75 @@
+---
+title: "Vetores - Outras Funcionalidades"
+subtitle: "Fundamentos da Linguagem R"
+author:
+- Antonio C. da Silva Júnior
+- https://juniorssz.github.io/home/
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+output: 
+  html_document:
+    theme: flatly
+    toc_float: true
+    toc: true
+    toc_depth: 2
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+```
+
+# Inclusão e remoção:
+
+```{r}
+uf <- c("AM", "PE", "TO", "MG")
+uf
+```
+
+<br>
+
+Incluindo o PR no final do vetor:
+```{r}
+uf <- append(uf, "PR")
+uf
+```
+
+<br>
+
+Substituindo o elemento da posição 2:
+```{r}
+uf[2] <- "CE"
+uf
+```
+
+<br>
+
+Removendo o elemento da posição 3:
+```{r}
+uf <- uf[-3]
+uf
+```
+
+<br>
+
+# Nomes
+
+<br>
+
+```{r}
+MGLU3 <- c(59.7, 60.5, 62.9, 63.7, 62.2)
+MGLU3
+```
+
+<br>
+
+```{r}
+names(MGLU3) <- c("SEG", "TER", "QUA", "QUI", "SEX")
+MGLU3
+```
+
+<br>
+
+```{r}
+MGLU3["QUA"]
+```
+

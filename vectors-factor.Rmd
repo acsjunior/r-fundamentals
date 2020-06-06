@@ -1,0 +1,183 @@
+---
+title: "Fatores"
+subtitle: "Fundamentos da Linguagem R"
+author:
+- Antonio C. da Silva Júnior
+- https://juniorssz.github.io/home/
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+output: 
+  html_document:
+    theme: flatly
+    toc_float: true
+    toc: true
+    toc_depth: 2
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+```
+
+# Criação
+
+<br>
+
+## Fator não ordenado
+
+<br>
+
+```{r}
+ufs <- c("sp", "sp", "pr", "sp", "pr", "pr", "sp", "sp", "pr", "pr")
+ufs
+```
+
+<br>
+
+```{r}
+uf <- factor(ufs)
+uf
+```
+
+```{r}
+uf <- factor(ufs, levels = c("pr", "sp"), labels = c("Paraná", "São Paulo"))
+uf
+```
+
+
+<br>
+
+## Fator ordenado
+
+<br>
+
+```{r}
+tamanho <- c("p", "m", "m", "p", "g", "m", "g", "p", "g", "m")
+tamanho
+```
+
+<br>
+
+```{r}
+tamanho <- factor(tamanho, levels=c("p", "m", "g"), ordered = T)
+tamanho
+```
+
+<br>
+
+```{r}
+tamanho <- factor(tamanho, levels=c("p", "m", "g"), labels = c("pequeno", "médio", "grande"), ordered = T)
+tamanho
+```
+
+<br>
+
+# Classe e tipo
+
+<br>
+
+```{r}
+class(uf)
+```
+
+<br>
+
+```{r}
+class(tamanho)
+```
+
+<br>
+
+```{r}
+typeof(uf)
+```
+
+<br>
+
+```{r}
+typeof(tamanho)
+```
+
+<br>
+
+# Teste
+
+```{r}
+is.factor(tamanho)
+```
+
+<br>
+
+```{r}
+is.vector(tamanho)
+```
+
+<br>
+
+# Conversão
+
+<br>
+
+Conversão para <i>numeric</i>:
+```{r}
+as.numeric(tamanho)
+```
+
+<br>
+
+Conversão para <i>character</i>:
+```{r}
+as.character(tamanho)
+```
+
+<br>
+
+# Manupilação
+
+<br>
+
+Obtendo os níveis:
+```{r}
+levels(uf)
+```
+
+<br>
+
+Alterando os níveis:
+```{r}
+levels(uf) <- c("PR", "SP")
+uf
+```
+
+<br>
+
+Alterando a ordem dos níveis (SP primeiro):
+```{r}
+uf <- relevel(uf, "SP")
+uf
+```
+
+<br>
+
+Obtendo a quantidade de níveis:
+```{r}
+nlevels(uf)
+```
+
+<br>
+
+Obtendo os valore mínimo e máximo:
+```{r}
+min(uf)
+```
+
+<br>
+
+```{r}
+min(tamanho)
+```
+
+<br>
+
+```{r}
+max(tamanho)
+```
