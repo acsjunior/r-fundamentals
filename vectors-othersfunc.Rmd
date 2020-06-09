@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE, error = TRUE)
 # Inclusão e remoção:
 
 ```{r}
-uf <- c("AM", "PE", "TO", "MG")
+uf <- c("TO", "MG", "AM", "PE")
 uf
 ```
 
@@ -43,10 +43,116 @@ uf
 
 <br>
 
-Removendo o elemento da posição 3:
+Removendo o elemento da posição 2:
 ```{r}
-uf <- uf[-3]
+uf <- uf[-4]
 uf
+```
+
+<br>
+
+# Quantidade de Elementos
+
+<br>
+
+```{r}
+length(uf)
+```
+
+<br>
+
+# Ordem dos Elementos
+
+<br>
+
+Organizando os elementos em ordem crescente:
+```{r}
+sort(uf)
+```
+
+<br>
+
+Organizando os elementos em ordem decrescente:
+```{r}
+sort(uf, decreasing = TRUE)
+```
+
+<br>
+
+Exibindo os elementos em ordem reversa:
+```{r}
+rev(uf)
+```
+
+<br>
+
+Obtendo o terceiro UF (considerando o alfabeto):
+```{r}
+i <- order(uf)
+i
+```
+
+<br>
+
+```{r}
+uf[i[3]]
+```
+
+<br>
+
+# Valores Únicos
+
+<br>
+
+```{r}
+x <- c("a", "b", "a", "c", "b", "c", "b", "a", "c", "b")
+unique(x)
+```
+
+<br>
+
+# Valores NA (missing)
+
+<br>
+
+Testando se os valores são NA:
+```{r}
+x <- c(1, 2, NA, 3, 4, 5, NA)
+is.na(x)
+```
+
+<br>
+
+Verificando se há ao menos um valor NA:
+```{r}
+any(is.na(x))
+```
+
+<br>
+
+# Repetindo valores
+
+<br>
+
+Repetindo a letra "a" 5 vezes:
+```{r}
+rep("a", 5)
+```
+
+<br>
+
+Criando um vetor com 5 elementos "a" e 5 elementos "b":
+```{r}
+v <- c(rep("a", 5), rep("b", 5))
+v
+```
+
+<br>
+
+Embaralhando os elementos:
+```{r}
+v <- sample(v)
+v
 ```
 
 <br>

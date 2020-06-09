@@ -165,7 +165,7 @@ nlevels(uf)
 
 <br>
 
-Obtendo os valore mínimo e máximo:
+Obtendo os valores mínimo e máximo:
 ```{r}
 min(uf)
 ```
