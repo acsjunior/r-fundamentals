@@ -1,3 +1,3 @@
-# Material de apoio ao curso Fundamento da Linguagem R
+# Material de apoio ao curso Fundamentos da Linguagem R
 
 https://juniorssz.github.io/home/classes/r-fundamentals/
