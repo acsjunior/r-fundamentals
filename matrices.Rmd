@@ -130,7 +130,7 @@ class(v2)
 
 De matriz para data frame:
 ```{r}
-df <- as.data.frame(matrix)
+df <- as.data.frame(v2)
 df
 ```
 

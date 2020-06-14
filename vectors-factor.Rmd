@@ -131,7 +131,7 @@ as.character(tamanho)
 
 <br>
 
-# Manupilação
+# Manipilação
 
 <br>
 

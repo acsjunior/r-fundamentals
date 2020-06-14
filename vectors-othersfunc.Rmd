@@ -51,7 +51,7 @@ uf
 
 <br>
 
-# Quantidade de Elementos
+# Quantidade de elementos
 
 <br>
 
@@ -61,7 +61,7 @@ length(uf)
 
 <br>
 
-# Ordem dos Elementos
+# Ordem dos elementos
 
 <br>
 
@@ -100,7 +100,7 @@ uf[i[3]]
 
 <br>
 
-# Valores Únicos
+# Valores únicos
 
 <br>
 

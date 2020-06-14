@@ -1,0 +1,113 @@
+---
+title: "Data Frames - Leitura e Escrita"
+subtitle: "Fundamentos da Linguagem R"
+author:
+- Antonio C. da Silva Júnior
+- https://juniorssz.github.io/home/
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+output: 
+  html_document:
+    theme: flatly
+    toc_float: true
+    toc: true 
+    toc_depth: 2
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+options(scipen=999)
+```
+
+# Leitura
+
+<br>
+
+## Primeiros passos
+
+<br>
+
+Lendo uma base de dados separada por vírgula:
+```{r}
+df_csv <- read.csv("iris.csv")
+head(df_csv)
+```
+
+<br>
+
+Lendo uma base de dados separada por ponto e vírgula:
+```{r}
+df_csv2 <- read.csv2("iris2.csv")
+head(df_csv2)
+```
+
+<br>
+
+Lendo uma base de dados separada por tabulação:
+```{r}
+df_tab <- read.table("iris.tsv")
+head(df_tab)
+```
+
+<br>
+
+```{r}
+df_tab <- read.table("iris.tsv", header = TRUE)
+head(df_tab)
+```
+
+<br>
+
+Lendo uma base de dados separada por tabulação, utilizando a função ao <code>read.csv()</code>::
+```{r}
+df_tab <- read.csv("iris.tsv")
+head(df_tab)
+```
+
+<br>
+
+```{r}
+df_tab <- read.csv("iris.tsv", sep = " ")
+head(df_tab)
+```
+
+<br>
+
+Lendo uma base de dados separada por vírgula, sem cabeçalho:
+```{r}
+df_csv3 <- read.csv("iris_without_header.csv")
+head(df_csv3)
+```
+
+<br>
+
+```{r}
+df_csv3 <- read.csv("iris_without_header.csv", header = F)
+head(df_csv3)
+```
+
+<br>
+
+```{r}
+df_csv3 <- read.csv("iris_without_header.csv", header = F, 
+                    col.names = c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species"))
+head(df_csv3)
+```
+
+<br>
+
+```{r}
+df_csv3 <- read.csv("iris_without_header.csv", header = F)
+colnames(df_csv3) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")
+head(df_csv3)
+```
+
+<br>
+
+## Excel
+
+<br>
+
+## Planilhas Google
+
+
