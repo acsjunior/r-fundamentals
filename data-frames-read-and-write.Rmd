@@ -232,3 +232,16 @@ df_mtcars <- read.xlsx("iris-mtcars.ods", sheet = 2)
 head(df_mtcars)
 ```
 
+<br>
+
+### Arquivos online
+
+<br>
+
+https://archive.ics.uci.edu/ml/datasets/wine
+
+```{r}
+df_wine <- read.csv("https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data")
+head(df_wine)
+```
+
