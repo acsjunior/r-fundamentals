@@ -240,6 +240,8 @@ head(df_mtcars)
 
 https://archive.ics.uci.edu/ml/datasets/wine
 
+<br>
+
 ```{r}
 df_wine <- read.csv("https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data")
 head(df_wine)
